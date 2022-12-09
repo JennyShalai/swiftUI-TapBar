@@ -13,41 +13,120 @@ struct EventsContent: View {
     
     var body: some View {
         
-        
-        VStack(alignment: .leading, spacing: 30) {
+        GeometryReader { geometry in // sell width
             
-            ForEach(data.events) { event in
+            VStack(alignment: .leading, spacing: 100) {
                 
-                HStack(spacing: 25) {
+                ForEach(data.events) { event in
                     
-                    Image(event.image)
-                        .resizable()
-                        .frame(width: 55, height: 55)
-                        .aspectRatio(contentMode: .fill)
+                    HStack(spacing: 0) {
                         
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(event.name)
-                            .fontWeight(.semibold)
+                        VStack(alignment: .leading, spacing: 25) {
                             
-                        Text(event.description)
+                            HStack {
+                                
+                                Image(systemName: "circle.fill")
+                                    .resizable()
+                                    .frame(width: 15, height: 15)
+                                    .aspectRatio(contentMode: .fill)
+                                    .foregroundColor(.purple)
+                                
+                                Text("kris.eth")
+                                    .fontWeight(.semibold)
+                                
+                                Text("2 days ago")
+                                    .foregroundColor(.gray)
+                            }
+                                .background(.blue)
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("UIP23 - DAO Operations Budget")
+                                    .fontWeight(.bold)
+                                    .font(.title3)
+                                Text("2 days left to vote vs snapshot")
+                                    .foregroundColor(.gray)
+                            }
+                                .background(.green)
+                            
+                            HStack(spacing: 20) {
+                                
+                                HStack(spacing: 4) {
+                                    Image(systemName: "square.stack.3d.down.forward")
+                                        .resizable()
+                                        .frame(width: 15, height: 15)
+                                        .aspectRatio(contentMode: .fill)
+                                        .foregroundColor(.gray)
+                                    Text("239")
+                                }
+                                    //.background(.green)
+                                
+                                HStack(spacing: 4) {
+                                    Image(systemName: "chart.bar.doc.horizontal.fill")
+                                        .resizable()
+                                        .frame(width: 15, height: 15)
+                                        .aspectRatio(contentMode: .fill)
+                                        .foregroundColor(.gray)
+                                        .rotationEffect(.degrees(-90))
+                                    Text("150%")
+                                }
+                                    //.background(.yellow)
+                            }
+                                .background(.red)
+                        }
+                            .frame(width: geometry.size.width * 0.7)
+                        
+                        VStack(alignment: .trailing, spacing: 37) {
+                            
+                            HStack(spacing: 0) {
+                                
+                                Image(systemName: "bubble.left.and.bubble.right")
+                                    .font(.system(size: 9))
+                                    .foregroundColor(.white)
+                                    //.background(.green)
+                                
+                                Text("DISCUSSION")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.white)
+                                    .fontWeight(.bold)
+                                    .minimumScaleFactor(0.1)
+                                    .lineLimit(1)
+                                    //.background(.blue)
+                                                                    
+                            }
+                                .frame(width: 110, height: 20)
+                                .background(.gray)
+                                .cornerRadius(50)
+                            
+                            Image(event.image)
+                                .resizable()
+                                .frame(width: 70, height: 70)
+                                .aspectRatio(contentMode: .fill)
+                            
+                            Button {
+                                print("... button tapped")
+                            } label: {
+                                Image(systemName: "ellipsis")
+                                    .foregroundColor(.black)
+                                .fontWeight(.bold)                            }
+                             
+                        }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(height: 200) // sell height
                     
-                    Button {
-                        // action if heart ico is tapped
-                        print("heart tapped")
-                    } label: {
-                        Image(systemName: "suit.heart")
-                            .font(.title3)
-                    }
-
                 }
+                    .background(.white)
+                    .cornerRadius(5)
+                    //.padding(10)
+                
+                
             }
-        }
-        .padding(25)
-        .background(Color.white)
-        .onAppear {
-            data.getEvents()
+            //.frame(width: geometry.size.width * 0.9, height: 250)
+            
+            .onAppear {
+                data.getEvents()
+            }
         }
     }
 }

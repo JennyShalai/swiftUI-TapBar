@@ -17,7 +17,7 @@ class DataService: ObservableObject {
     
     func getEvents() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             print("API call imitation with 2 sec delay..")
             
             // get data from API, modefied it to the Event objects and store them in the self.events 
