@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA600E3D293E90B100502607 /* tamplate_with_navigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA600E3C293E90B100502607 /* tamplate_with_navigationApp.swift */; };
+		BA4BFC6A2943DF5600D510FC /* CreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BFC692943DF5600D510FC /* CreatorView.swift */; };
+		BA4BFC6C2943E00400D510FC /* TitleSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BFC6B2943E00400D510FC /* TitleSubtitleView.swift */; };
+		BA4BFC6E2943E0E500D510FC /* VotesMetaInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BFC6D2943E0E500D510FC /* VotesMetaInfoView.swift */; };
+		BA4BFC702943E19200D510FC /* StatusLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4BFC6F2943E19200D510FC /* StatusLogoView.swift */; };
+		BA600E3D293E90B100502607 /* template_with_navigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA600E3C293E90B100502607 /* template_with_navigationApp.swift */; };
 		BA600E3F293E90B100502607 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA600E3E293E90B100502607 /* ContentView.swift */; };
 		BA600E41293E90B200502607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA600E40293E90B200502607 /* Assets.xcassets */; };
 		BA600E44293E90B200502607 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA600E43293E90B200502607 /* Preview Assets.xcassets */; };
@@ -21,8 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA600E39293E90B100502607 /* tamplate-with-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tamplate-with-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA600E3C293E90B100502607 /* tamplate_with_navigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tamplate_with_navigationApp.swift; sourceTree = "<group>"; };
+		BA4BFC692943DF5600D510FC /* CreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorView.swift; sourceTree = "<group>"; };
+		BA4BFC6B2943E00400D510FC /* TitleSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleView.swift; sourceTree = "<group>"; };
+		BA4BFC6D2943E0E500D510FC /* VotesMetaInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesMetaInfoView.swift; sourceTree = "<group>"; };
+		BA4BFC6F2943E19200D510FC /* StatusLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLogoView.swift; sourceTree = "<group>"; };
+		BA600E39293E90B100502607 /* template-with-navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "template-with-navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA600E3C293E90B100502607 /* template_with_navigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = template_with_navigationApp.swift; sourceTree = "<group>"; };
 		BA600E3E293E90B100502607 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA600E40293E90B200502607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA600E43293E90B200502607 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,10 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA4BFC682943DF2400D510FC /* EventsContentHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA4BFC692943DF5600D510FC /* CreatorView.swift */,
+				BA4BFC6B2943E00400D510FC /* TitleSubtitleView.swift */,
+				BA4BFC6D2943E0E500D510FC /* VotesMetaInfoView.swift */,
+				BA4BFC6F2943E19200D510FC /* StatusLogoView.swift */,
+			);
+			path = EventsContentHelpers;
+			sourceTree = "<group>";
+		};
 		BA600E30293E90B100502607 = {
 			isa = PBXGroup;
 			children = (
-				BA600E3B293E90B100502607 /* tamplate-with-navigation */,
+				BA600E3B293E90B100502607 /* template-with-navigation */,
 				BA600E3A293E90B100502607 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,21 +76,21 @@
 		BA600E3A293E90B100502607 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA600E39293E90B100502607 /* tamplate-with-navigation.app */,
+				BA600E39293E90B100502607 /* template-with-navigation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA600E3B293E90B100502607 /* tamplate-with-navigation */ = {
+		BA600E3B293E90B100502607 /* template-with-navigation */ = {
 			isa = PBXGroup;
 			children = (
-				BA600E3C293E90B100502607 /* tamplate_with_navigationApp.swift */,
+				BA600E3C293E90B100502607 /* template_with_navigationApp.swift */,
 				BA895029293EE0B30054E6BC /* View */,
 				BA895028293EE09A0054E6BC /* Model */,
 				BA600E40293E90B200502607 /* Assets.xcassets */,
 				BA600E42293E90B200502607 /* Preview Content */,
 			);
-			path = "tamplate-with-navigation";
+			path = "template-with-navigation";
 			sourceTree = "<group>";
 		};
 		BA600E42293E90B200502607 /* Preview Content */ = {
@@ -108,6 +127,7 @@
 				BA89502B293F8D710054E6BC /* StickyHeader.swift */,
 				BA895024293ED1910054E6BC /* MenuBarView.swift */,
 				BA89502D293F8E210054E6BC /* EventsContent.swift */,
+				BA4BFC682943DF2400D510FC /* EventsContentHelpers */,
 			);
 			path = EventsViewHelpers;
 			sourceTree = "<group>";
@@ -115,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA600E38293E90B100502607 /* tamplate-with-navigation */ = {
+		BA600E38293E90B100502607 /* template-with-navigation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA600E47293E90B200502607 /* Build configuration list for PBXNativeTarget "tamplate-with-navigation" */;
+			buildConfigurationList = BA600E47293E90B200502607 /* Build configuration list for PBXNativeTarget "template-with-navigation" */;
 			buildPhases = (
 				BA600E35293E90B100502607 /* Sources */,
 				BA600E36293E90B100502607 /* Frameworks */,
@@ -127,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = "tamplate-with-navigation";
+			name = "template-with-navigation";
 			productName = "tamplate-with-navigation";
-			productReference = BA600E39293E90B100502607 /* tamplate-with-navigation.app */;
+			productReference = BA600E39293E90B100502607 /* template-with-navigation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA600E34293E90B100502607 /* Build configuration list for PBXProject "tamplate-with-navigation" */;
+			buildConfigurationList = BA600E34293E90B100502607 /* Build configuration list for PBXProject "template-with-navigation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA600E38293E90B100502607 /* tamplate-with-navigation */,
+				BA600E38293E90B100502607 /* template-with-navigation */,
 			);
 		};
 /* End PBXProject section */
@@ -183,13 +203,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA895027293ED5330054E6BC /* DataSource.swift in Sources */,
+				BA4BFC6E2943E0E500D510FC /* VotesMetaInfoView.swift in Sources */,
 				BA89502E293F8E210054E6BC /* EventsContent.swift in Sources */,
 				BA600E3F293E90B100502607 /* ContentView.swift in Sources */,
 				BA895023293EAF020054E6BC /* ProposalsView.swift in Sources */,
-				BA600E3D293E90B100502607 /* tamplate_with_navigationApp.swift in Sources */,
+				BA600E3D293E90B100502607 /* template_with_navigationApp.swift in Sources */,
 				BA600E4B293EAE0600502607 /* EventsView.swift in Sources */,
 				BA89502C293F8D710054E6BC /* StickyHeader.swift in Sources */,
+				BA4BFC6A2943DF5600D510FC /* CreatorView.swift in Sources */,
 				BA895025293ED1910054E6BC /* MenuBarView.swift in Sources */,
+				BA4BFC702943E19200D510FC /* StatusLogoView.swift in Sources */,
+				BA4BFC6C2943E00400D510FC /* TitleSubtitleView.swift in Sources */,
 				BA895021293EAEC50054E6BC /* DAOsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"tamplate-with-navigation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"template-with-navigation/Preview Content\"";
 				DEVELOPMENT_TEAM = R2A35BPTWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -332,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "self.tamplate-with-navigation";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.template-with-navigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"tamplate-with-navigation/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"template-with-navigation/Preview Content\"";
 				DEVELOPMENT_TEAM = R2A35BPTWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -361,7 +385,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "self.tamplate-with-navigation";
+				PRODUCT_BUNDLE_IDENTIFIER = "self.template-with-navigation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -372,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA600E34293E90B100502607 /* Build configuration list for PBXProject "tamplate-with-navigation" */ = {
+		BA600E34293E90B100502607 /* Build configuration list for PBXProject "template-with-navigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA600E45293E90B200502607 /* Debug */,
@@ -381,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA600E47293E90B200502607 /* Build configuration list for PBXNativeTarget "tamplate-with-navigation" */ = {
+		BA600E47293E90B200502607 /* Build configuration list for PBXNativeTarget "template-with-navigation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA600E48293E90B200502607 /* Debug */,

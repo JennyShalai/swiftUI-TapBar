@@ -1,6 +1,6 @@
 //
-//  tamplate_with_navigationApp.swift
-//  tamplate-with-navigation
+//  template_with_navigationApp.swift
+//  template-with-navigation
 //
 //  Created by Jenny Shalai on 2022-12-05.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct tamplate_with_navigationApp: App {
+struct template_with_navigationApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -1,6 +1,6 @@
 //
 //  DataSource.swift
-//  tamplate-with-navigation
+//  template-with-navigation
 //
 //  Created by Jenny Shalai on 2022-12-05.
 //
