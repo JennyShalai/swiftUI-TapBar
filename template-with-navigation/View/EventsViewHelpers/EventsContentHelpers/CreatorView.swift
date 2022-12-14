@@ -23,7 +23,7 @@ struct CreatorView: View {
                 .foregroundColor(.gray)
             Spacer() // to push content to the left edge
         }
-         .padding(.leading, 15)
+         .padding(.leading, 25)
     }
 }
 

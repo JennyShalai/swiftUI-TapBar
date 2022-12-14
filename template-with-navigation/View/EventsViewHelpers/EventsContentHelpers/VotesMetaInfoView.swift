@@ -23,7 +23,6 @@ struct VotesMetaInfoView: View {
                 
                 Text("239")
             }
-                //.background(.green)
             
             HStack(spacing: 4) {
                 
@@ -36,9 +35,8 @@ struct VotesMetaInfoView: View {
                 
                 Text("150%")
             }
-                //.background(.yellow)
         }
-           .padding(.leading, 15)
+           .padding(.leading, 25)
     }
 }
 

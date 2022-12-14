@@ -23,9 +23,7 @@ struct EventsView: View {
                 Spacer(minLength: 10)
                 MenuBarView(index: self.$index)
                 Spacer(minLength: 20)
-                EventsContent()
-                    .frame(width: UIScreen.main.bounds.width)
-                    
+                EventsContent()     
             }
             .frame(width: UIScreen.main.bounds.width)
             

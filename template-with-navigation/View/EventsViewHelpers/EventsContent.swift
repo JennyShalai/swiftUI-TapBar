@@ -17,36 +17,32 @@ struct EventsContent: View {
             
             ForEach(data.events) { event in
                 
-                HStack(spacing: 0) {
+                ZStack {
                     
-                    VStack(alignment: .leading, content: {
+                    
+                    RoundedRectangle(cornerRadius: 5).fill(.white).padding(.horizontal)
+                    
+                    HStack(spacing: 0) {
                         
-                        CreatorView()
-                            .background(.red)
-                        Spacer()
-                        TitleSubtitleView()
-                            .background(.green)
-                        Spacer()
-                        VotesMetaInfoView()
-                    })
-                        .frame(width: 240, height: 160)
-                        //.padding(.leading, 10)
-                        .background(.orange)
-                     
-                    Spacer(minLength: 5)
-                    
-                    StatusLogoView()
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .frame(height: 160)
-                        .padding(.trailing, 10)
-                        .background(.blue)
+                        VStack(alignment: .leading, content: {
+                            
+                            CreatorView()
+                            Spacer()
+                            TitleSubtitleView()
+                            Spacer()
+                            VotesMetaInfoView()
+                        })
+                            .frame(width: 260, height: 160)
+                        
+                        StatusLogoView()
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .frame(height: 160)
+                            
+                    }
+                        // each cell
+                        .frame(height: 180)
                         
                 }
-                    // each cell
-                    .frame(height: 200)
-                    .frame(width: 360)
-                    .background(.white)
-                    .cornerRadius(10)
                     
             }
             
@@ -55,7 +51,8 @@ struct EventsContent: View {
             .onAppear {
                 data.getEvents()
             }
-            .frame(width: UIScreen.main.bounds.width)
+            //.frame(width: 380)
+            //.background(.red)
             
     }
 }

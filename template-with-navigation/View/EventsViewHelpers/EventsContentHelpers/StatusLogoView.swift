@@ -51,6 +51,7 @@ struct StatusLogoView: View {
              
         }
             .background(.white)
+            .padding(.trailing, 25)
     }
 }
 

@@ -83,7 +83,7 @@ struct MenuBarView: View {
                         .cornerRadius(25)
                 }
             }
-            .padding(.leading, 5)
+            .padding(.leading, 15)
         }
     }
 }
