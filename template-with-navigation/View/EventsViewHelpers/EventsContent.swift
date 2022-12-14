@@ -12,7 +12,9 @@ struct EventsContent: View {
     @StateObject var data = DataService.data
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 10) {
+            
             ForEach(data.events) { event in
                 
                 HStack(spacing: 0) {
@@ -20,13 +22,16 @@ struct EventsContent: View {
                     VStack(alignment: .leading, content: {
                         
                         CreatorView()
+                            .background(.red)
                         Spacer()
                         TitleSubtitleView()
+                            .background(.green)
                         Spacer()
                         VotesMetaInfoView()
                     })
-                        .frame(width: 280, height: 160)
-                        .padding(.leading, 10)
+                        .frame(width: 240, height: 160)
+                        //.padding(.leading, 10)
+                        .background(.orange)
                      
                     Spacer(minLength: 5)
                     
@@ -34,13 +39,14 @@ struct EventsContent: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .frame(height: 160)
                         .padding(.trailing, 10)
+                        .background(.blue)
                         
                 }
                     // each cell
                     .frame(height: 200)
+                    .frame(width: 360)
                     .background(.white)
                     .cornerRadius(10)
-                    
                     
             }
             
@@ -49,6 +55,7 @@ struct EventsContent: View {
             .onAppear {
                 data.getEvents()
             }
+            .frame(width: UIScreen.main.bounds.width)
             
     }
 }

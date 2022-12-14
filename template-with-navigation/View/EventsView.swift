@@ -11,33 +11,29 @@ struct EventsView: View {
     
     @StateObject var data = DataService.data
     @State var index: Int = 1
+    var screensize = UIScreen.main.bounds.width
     
     var body: some View {
-       
-        VStack {
+        
+        ScrollView(.vertical, showsIndicators: false) {
             
-            ScrollView(.vertical, showsIndicators: false) {
+            VStack {
                 
-                VStack {
+                StickyHeader()
+                Spacer(minLength: 10)
+                MenuBarView(index: self.$index)
+                Spacer(minLength: 20)
+                EventsContent()
+                    .frame(width: UIScreen.main.bounds.width)
                     
-                    StickyHeader()
-                    Spacer(minLength: 10)
-                    MenuBarView(index: self.$index)
-                    Spacer(minLength: 20)
-                    EventsContent()
-                        
-                }
-                .frame(width: UIScreen.main.bounds.width )
-                
-                
             }
-                .ignoresSafeArea(.container, edges: .vertical)
-                .background(Color(UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)))
-                //.frame(width: UIScreen.main.bounds.width)
+            .frame(width: UIScreen.main.bounds.width)
+            
         }
-        
-                
-        
+            .ignoresSafeArea(.container, edges: .vertical)
+            .background(Color(UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0)))
+            //.frame(width: UIScreen.main.bounds.width)
+   
     }
 }
 

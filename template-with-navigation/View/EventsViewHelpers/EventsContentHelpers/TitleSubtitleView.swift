@@ -20,7 +20,8 @@ struct TitleSubtitleView: View {
                     .foregroundColor(.gray)
                 
             }
-            //Spacer()
+                .padding(.leading, 15)
+            //Spacer(minLength: 1)
         }
         
     }

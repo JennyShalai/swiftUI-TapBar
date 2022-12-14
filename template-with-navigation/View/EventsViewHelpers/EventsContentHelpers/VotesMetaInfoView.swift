@@ -38,6 +38,7 @@ struct VotesMetaInfoView: View {
             }
                 //.background(.yellow)
         }
+           .padding(.leading, 15)
     }
 }
 
