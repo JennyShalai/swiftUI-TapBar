@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CreatorView: View {
+    
+    var event: Event
+    
     var body: some View {
         HStack {
             Image(systemName: "circle.fill")
@@ -16,7 +19,7 @@ struct CreatorView: View {
                 .aspectRatio(contentMode: .fill)
                 .foregroundColor(.purple)
             
-            Text("kris.eth")
+            Text(event.author)
                 .fontWeight(.semibold)
             
             Text("2 days ago")
@@ -29,6 +32,6 @@ struct CreatorView: View {
 
 struct CreatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatorView()
+        CreatorView(event: Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
     }
 }

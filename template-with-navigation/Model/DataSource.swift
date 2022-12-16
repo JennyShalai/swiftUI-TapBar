@@ -9,50 +9,62 @@ import SwiftUI
 
 class DataService: ObservableObject {
     
-    @Published var events: [Event] = []
-    @Published var isLoading: Bool = false
+    @Published private (set) var events: [Event] = []
     
-    private init(){}
+    
+    private init() { getEvents() }
     static let data = DataService()
     
     func getEvents() {
-        isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            print("API call imitation with 2 sec delay..")
-            
-            // get data from API, modefied it to the Event objects and store them in the self.events 
-            self.events = [
-                Event(name: "EventNameOne", description: "Event description first shoul be here", image: "icon-1"),
-                Event(name: "EventNameTwo", description: "Event description two goes here and should be a little longer to check an alignment", image: "icon-2"),
-                Event(name: "EventNameThree", description: "Event description three", image: "icon-3"),
-                Event(name: "EventNameOne", description: "Event description first shoul be here", image: "icon-1"),
-                Event(name: "EventNameTwo", description: "Event description two goes here and should be a little longer to check an alignment", image: "icon-2"),
-                Event(name: "EventNameThree", description: "Event description three", image: "icon-3"),
-                Event(name: "EventNameOne", description: "Event description first shoul be here", image: "icon-1"),
-                Event(name: "EventNameTwo", description: "Event description two goes here and should be a little longer to check an alignment", image: "icon-2"),
-                Event(name: "EventNameThree", description: "Event description three", image: "icon-3"),
-                Event(name: "EventNameOne", description: "Event description first shoul be here", image: "icon-1"),
-                Event(name: "EventNameTwo", description: "Event description two goes here and should be a little longer to check an alignment", image: "icon-2"),
-                Event(name: "EventNameThree", description: "Event description three", image: "icon-3")
-            ]
-            
-            self.isLoading = false
-            
-        }
+        self.events = []
+        events.append(Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "jenny", title: "UIP19 - DAO Operations", description: "Snapshot voting ends in 3 days", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "evgesha", title: "UIP18 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "jennyky", title: "UIP11 - DAO Operations", description: "Snapshot voting ends in 3 days", image: Image(systemName: "face.smiling")))
+        
+        
+        
+    }
+    
+    func refreshedEvents() {
+        self.events = []
+        events.append(Event(type: "vote", author: "jackLo", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "SamVu", title: "UIP19 - DAO Operations", description: "Snapshot voting ends in 3 days", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "Jack", title: "UIP18 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
+        events.append(Event(type: "vote", author: "Sam", title: "UIP11 - DAO Operations", description: "Snapshot voting ends in 3 days", image: Image(systemName: "face.smiling")))
+   
+        
         
     }
     
 }
     
     
-struct Event: Identifiable, Hashable, Codable {
+struct Event: Identifiable {
     
-    var id = UUID().uuidString
-    var name: String
+//    static func == (lhs: Event, rhs: Event) -> Bool {
+//        return lhs.type == rhs.type &&
+//                lhs.author == rhs.author &&
+//                lhs.title == rhs.title &&
+//                lhs.description == rhs.description &&
+//                lhs.image == rhs.image
+//    }
+    
+    var id: String = UUID().uuidString
+    var type: String
+    var author: String
+    var title: String
     var description: String
-    var image: String
+    var image: Image
+    
+    
 }
-
+enum eventType: String {
+    case vote = "vote"
+    case news = "news"
+}
 struct DAOs {}
 
 struct Proposal {}
+
+

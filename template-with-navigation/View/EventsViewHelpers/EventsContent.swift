@@ -9,56 +9,47 @@ import SwiftUI
 
 struct EventsContent: View {
     
-    @StateObject var data = DataService.data
+    var events: [Event]
     
     var body: some View {
         
         VStack(alignment: .leading, spacing: 10) {
             
-            ForEach(data.events) { event in
+            ForEach(events, id: \.id) { event in
                 
                 ZStack {
                     
-                    
-                    RoundedRectangle(cornerRadius: 5).fill(.white).padding(.horizontal)
+                    RoundedRectangle(cornerRadius: 5)
+                        .fill(.white)
+                        .padding(.horizontal)
                     
                     HStack(spacing: 0) {
                         
                         VStack(alignment: .leading, content: {
                             
-                            CreatorView()
+                            CreatorView(event: event)
                             Spacer()
-                            TitleSubtitleView()
+                            TitleSubtitleView(event: event)
                             Spacer()
-                            VotesMetaInfoView()
+                            VotesMetaInfoView(event: event)
                         })
                             .frame(width: 260, height: 160)
                         
-                        StatusLogoView()
+                        StatusLogoView(event: event)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                             .frame(height: 160)
                             
                     }
                         // each cell
                         .frame(height: 180)
-                        
-                }
-                    
+                }   
             }
-            
         }
-            // cells container
-            .onAppear {
-                data.getEvents()
-            }
-            //.frame(width: 380)
-            //.background(.red)
-            
     }
 }
 
 struct EventsContent_Previews: PreviewProvider {
     static var previews: some View {
-        EventsContent()
+        EventsContent(events: [Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling"))])
     }
 }

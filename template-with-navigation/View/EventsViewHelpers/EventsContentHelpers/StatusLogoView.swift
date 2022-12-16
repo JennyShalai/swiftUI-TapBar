@@ -9,8 +9,7 @@ import SwiftUI
 
 struct StatusLogoView: View {
     
-    @StateObject var data = DataService.data
-    //@State var event: Event
+    var event: Event
     
     var body: some View {
         
@@ -34,7 +33,7 @@ struct StatusLogoView: View {
                 .cornerRadius(50)
             
             Spacer()
-            Image(systemName: "face.smiling.inverse")
+            event.image
                 .resizable()
                 .frame(width: 50, height: 50)
                 //.aspectRatio(contentMode: .fill)
@@ -57,6 +56,6 @@ struct StatusLogoView: View {
 
 struct StatusLogoView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusLogoView()
+        StatusLogoView(event: Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
     }
 }

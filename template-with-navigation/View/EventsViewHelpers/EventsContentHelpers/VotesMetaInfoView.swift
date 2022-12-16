@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct VotesMetaInfoView: View {
+    
+    var event: Event
    
     var body: some View {
         
@@ -42,6 +44,6 @@ struct VotesMetaInfoView: View {
 
 struct VotesMetaInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        VotesMetaInfoView()
+        VotesMetaInfoView(event: Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
     }
 }

@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct TitleSubtitleView: View {
+    
+    var event: Event
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 5) {
             
-            Text("UIP23 - DAO Ope rations Budget")
+            Text(event.title)
                 .fontWeight(.bold)
                 .font(.system(size: 18))
                 .lineLimit(2)
             
-            Text("2 days left to vote vs snapshot")
+            Text(event.description)
                 .foregroundColor(.gray)
                 .lineLimit(2)
             
@@ -30,6 +33,6 @@ struct TitleSubtitleView: View {
 
 struct TitleSubtitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleSubtitleView()
+        TitleSubtitleView(event: Event(type: "vote", author: "evgeshaky", title: "UIP23 - DAO Operations Budget", description: "2 days left to vote vs snapshot", image: Image(systemName: "face.smiling")))
     }
 }
